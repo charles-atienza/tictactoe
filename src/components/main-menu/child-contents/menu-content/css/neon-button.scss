@@ -1,0 +1,57 @@
+.neon-button-big {
+    font-size: 3rem;
+    color: var(--clr-cyan);
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    height: 2em;
+    width: 100%;
+    font-weight: lighter;
+
+    background-color: transparent;
+    border: var(--clr-cyan) 0.125em solid;
+    border-radius: 0.25em;
+
+    text-shadow:
+        0 0 1em hsl(0, 0%, 30% / 0.4),
+        0 0 0.45em currentColor;
+
+    box-shadow:
+        0 0 0.5em 0 var(--clr-cyan);
+
+    position: relative;
+
+    transition:
+        background-color 100ms linear;
+}
+
+.neon-button-big::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0 0 1em 0.15em var(--clr-cyan);
+    opacity: 0;
+    z-index: -1;
+
+    transition: opacity 100ms linear;
+}
+
+.neon-button-big:focus {
+    outline: 0;
+}
+
+.neon-button-big:hover,
+.neon-button-big:focus {
+    background: var(--clr-cyan);
+    color: var(--clr-bg);
+    text-shadow: none;
+}
+
+.neon-button-big:hover::after,
+.neon-button-big:focus::after {
+    opacity: 1;
+}

@@ -1,0 +1,44 @@
+.neon-input {
+    font: inherit;
+    font-size: 3rem;
+    color: var(--clr-cyan);
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    height: 2em;
+
+    background-color: transparent;
+    border: none;
+    outline: var(--clr-cyan) 0.125em solid;
+    border-radius: 0.25em;
+
+    box-shadow:
+        0 0 0.5em 0 var(--clr-cyan);
+
+    position: relative;
+    padding-left: 1rem;
+
+    transition:
+        background-color 100ms linear;
+}
+
+.neon-input:hover,
+.neon-input:focus {
+    color: var(--clr-cyan);
+    text-shadow: none;
+    content: '';
+    height: 2em;
+    box-shadow: 0 0 1em 0.15em var(--clr-cyan);
+    opacity: 1;
+
+    transition: opacity 100ms linear;
+}
+
+.neon-input::placeholder {
+    transition: opacity 0.3s linear;
+    text-align: center;
+}
+
+.neon-input:focus::placeholder {
+    opacity: 0;
+}

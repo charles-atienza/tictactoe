@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root {
+    --clr-cyan: hsl(180 100% 50% / 0.85);
+    --clr-purple: rgba(220, 107, 255);
+    --clr-bg: rgb(40, 32, 49);
+}
+
+body {
+    background: var(--clr-bg);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+}
+
+* {
+    color: #adadad;
+    font-family: 'Roboto', sans-serif;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
