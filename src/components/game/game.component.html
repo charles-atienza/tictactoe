@@ -1,3 +1,7 @@
-<p>
-  game works!
-</p>
+<div class="container">
+  <div class="game-board">
+    <ng-container *ngFor="let item of boardSize">
+      <div class="box" (click)="onClick">{{item}}</div>
+    </ng-container>
+  </div>
+</div>

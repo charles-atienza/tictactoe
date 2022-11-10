@@ -1,6 +1,4 @@
 .content-group {
-    height: 100%;
-    width: 100%;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -30,4 +28,18 @@
     -ms-flex-align: center;
     align-items: center;
     display: grid;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 9fr;
+    gap: 0px 0px;
+}
+
+.header-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

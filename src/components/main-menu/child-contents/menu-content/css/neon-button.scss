@@ -9,16 +9,8 @@
     font-weight: lighter;
 
     background-color: transparent;
-    border: var(--clr-cyan) 0.125em solid;
+    border: var(--clr-cyan) 0.1em solid;
     border-radius: 0.25em;
-
-    text-shadow:
-        0 0 1em hsl(0, 0%, 30% / 0.4),
-        0 0 0.45em currentColor;
-
-    box-shadow:
-        0 0 0.5em 0 var(--clr-cyan);
-
     position: relative;
 
     transition:
@@ -33,7 +25,7 @@
     width: 100%;
     height: 100%;
 
-    box-shadow: 0 0 1em 0.15em var(--clr-cyan);
+    box-shadow: 0 0 0.45em 0.05em var(--clr-cyan);
     opacity: 0;
     z-index: -1;
 
@@ -46,8 +38,10 @@
 
 .neon-button-big:hover,
 .neon-button-big:focus {
-    background: var(--clr-cyan);
-    color: var(--clr-bg);
+    // background: var(--clr-cyan);
+    font-size: 3.5rem;
+    height: 1.72em;
+    border: var(--clr-cyan) 0.3rem solid;
     text-shadow: none;
 }
 

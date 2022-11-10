@@ -9,7 +9,7 @@
     font-weight: lighter;
 
     background-color: transparent;
-    border: var(--clr-purple) 0.125em solid;
+    border: none;
     border-radius: 0.25em;
 
     text-shadow:
@@ -17,7 +17,7 @@
         0 0 0.45em currentColor;
 
     box-shadow:
-        0 0 0.5em 0 var(--clr-purple);
+        0 0 0.15em 0 var(--clr-purple);
 
     position: relative;
 
@@ -25,19 +25,40 @@
         background-color 100ms linear;
 }
 
+.neon-button-1::after,
+.neon-button-1::before {
+    --size: calc(100%);
+    content: '';
+    position: absolute;
+    inset: 50% 0 0 50%;
+    translate: -50% -50%;
+    pointer-events: none;
+
+    transition: scale 0.4s ease-out, border-radius 0.1s ease-out;
+}
+
 .neon-button-1::after {
     content: '';
     position: absolute;
-    top: 0%;
-    left: 0;
     width: 100%;
     height: 100%;
-
-    box-shadow: 0 0 1em 0.15em var(--clr-purple);
+    box-shadow: 0 0 0.45em 0.05em var(--clr-purple);
     opacity: 0;
     z-index: -1;
 
+
+
+    scale: 1 1;
+
     transition: opacity 100ms linear;
+}
+
+.neon-button-1::before {
+    width: var(--size);
+    height: 101%;
+    border-top: 0.07em solid var(--clr-purple);
+    border-bottom: 0.07em solid var(--clr-purple);
+    scale: 0 1;
 }
 
 .neon-button-1:focus {
@@ -46,12 +67,16 @@
 
 .neon-button-1:hover,
 .neon-button-1:focus {
-    background: rgba(213, 75, 255, 0.8);
-    color: var(--clr-bg);
     text-shadow: none;
 }
 
 .neon-button-1:hover::after,
-.neon-button-1:focus::after {
+.neon-button-1:focus::after,
+.neon-button-1:hover::before,
+.neon-button-1:focus::before {
+    scale: 1;
     opacity: 1;
+    border-radius: 0.25em;
+
+    transition: scale 0.4s ease-out, border-radius 0.45s ease-in;
 }
