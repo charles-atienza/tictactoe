@@ -1,7 +1,9 @@
 <div class="container">
   <div class="game-board">
-    <ng-container *ngFor="let item of boardSize">
-      <div class="box" (click)="onClick">{{item}}</div>
+    <ng-container *ngFor="let y of board; let xIndex = index">
+      <ng-container *ngFor="let x of y; let yIndex = index">
+        <div class="box" (click)="onClick(xIndex, yIndex)">{{x}}</div>
+      </ng-container>
     </ng-container>
   </div>
 </div>
